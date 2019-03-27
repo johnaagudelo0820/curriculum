@@ -14,7 +14,10 @@ const App = () => (
       <About />
     </Sidebar>
     <Info>
-
+      <Education />
+      <Experience />
+      <Certificates />
+      <Skills />
     </Info>
   </Main>
 );
