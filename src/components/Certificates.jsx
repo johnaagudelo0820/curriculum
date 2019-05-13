@@ -1,12 +1,16 @@
 import React from 'react';
 
-const Certificates = () => (
+const Certificates = props => (
   <div className="Certificates">
     <div className="Certificates-container"> 
-      <div className="Certificates-item">
-        <h3>React</h3>
-        <p>Aprendi muchas cosas</p>
-      </div>
+     {props.data.map((cer,index) => (
+        <div key={index} className="Certificates-item">
+          <h3>{cer.name}</h3>
+          <p>{cer.institution}</p>
+          <p>{cer.description}</p>
+          <p>{cer.date}</p>
+        </div>
+     ))}
     </div>
   </div>
 )

@@ -1,30 +1,36 @@
 import React from 'react';
+import Social from './Social';
+import style from 'styled-components';
 
-const About = () => (
-  <div className="About">
+const AboutStyle = style.div`
+  text-align: center;
+`;
+
+const About = props => (
+  <AboutStyle>
     <div className="About-container">
       <div className="About-avatar">
         <figure>
-          <img src="" alt=""/>
+          <img src={props.avatar} alt={props.name}/>
         </figure>
       </div>
       <div className="About-name">
-        <h2>John Alexander Agudelo</h2>
+        <h2>{props.name}</h2>
       </div>
       <div className="About-profession">
-        <p>FrontEnd Developer en Synapbox</p>
+        <p>{props.profession}</p>
       </div>
       <div className="About-desc">
-        <p>Soy un desarrollador full stack ❤️ JS</p>
+        <p>{props.bio}</p>
       </div>
       <div className="About-location">
-        <p>Ciudad de México, México</p>
+        <p>{props.address}</p>
       </div>
       <div className="About-social">
-        Social
+       <Social social={props.social} />
       </div>
     </div>
-  </div>
+  </AboutStyle>
 );
 
 export default About;
